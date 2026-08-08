@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import { updateExpense, addExpense } from "@/services/expensesService";
 export default function AddExpensesForm({ expense, onClose }) {
     const [date, setDate] = useState("");
     const [category, setCategory] = useState("");
@@ -17,7 +17,7 @@ export default function AddExpensesForm({ expense, onClose }) {
         }
     }, [expense]);
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
 
         try {
