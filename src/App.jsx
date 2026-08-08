@@ -21,7 +21,7 @@ export default function App() {
         return <div>Loading...</div>;
     }
     return (
-        <BrowserRouter>
+        <BrowserRouter basename="/MyBudgetReact">
             <Routes>
                 <Route path="/" element={<Dashboard data={data} />} />
                 <Route path="/expenses" element={<Expenses expensesTotal={data.expenseTotal } expenses = {data.transactions} />} />
