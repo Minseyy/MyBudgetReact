@@ -9,7 +9,7 @@ export async function addIncome(income) {
     return newIncomeRef.key;
 }
 
-export async function removeIncome(id) {
+export async function deleteIncome(id) {
     const incomeRef = ref(db, `incomes/${id}`);
     await remove(incomeRef);
 }

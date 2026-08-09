@@ -1,8 +1,8 @@
 import Navbar from "@/components/Navbar";
 import GoalsGrid from "../components/GoalsGrid";
 import StatsCard from "../components/StatsCard";
-
-export default function Goals({ goals = [], savingsTotal = 0 }) {
+import {useState} from "react";
+export default function Goals({ deposits= [],goals = [], savingsTotal = 0 }) {
         const [openModal, setOpenModal] = useState(false);
 
     return (

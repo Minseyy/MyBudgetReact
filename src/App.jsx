@@ -26,7 +26,7 @@ export default function App() {
                 <Route path="/" element={<Dashboard data={data} />} />
                 <Route path="/expenses" element={<Expenses expensesTotal={data.expenseTotal } expenses = {data.transactions} />} />
                 <Route path="/expenses/history" element={<ExpensesHistory transactions={data.transactions} expenseTotal={data.expenseTotal}/>} />
-                <Route path="/goals" element={<Goals goals={data.goals} savingsTotal={data.savingTotal}/>} />
+                <Route path="/goals" element={<Goals depostis= {data.deposits} goals={data.goals} savingsTotal={data.savingTotal}/>} />
                 <Route path="/wallet" element={<Wallet incomes={data.incomes} incomeTotal={data.incomeTotal} wallet={data.wallet} spent={data.expenseTotal}/>} />
                 <Route path="/wallet/history" element={<WalletHistory incomes={data.incomes} incomeTotal={data.incomeTotal}/>} />
                 <Route path="/savings" element={<Savings savings={data.deposits} savingsTotal={data.savingTotal} goals={data.goals} />} />
